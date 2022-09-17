@@ -9,8 +9,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    const { id } = req.query;
-    const query = postDetailQuery(id);
+    const { postId } = req.query;
+    const query = postDetailQuery("${postId}");
 
     const data = await client.fetch(query);
 
