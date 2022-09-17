@@ -38,6 +38,7 @@ export const postDetailQuery = (postId: string | string[]) => {
           _id,
           url
         }
+
       },
       userId,
     postedBy->{
