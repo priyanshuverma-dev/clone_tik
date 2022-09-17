@@ -41,7 +41,7 @@ const Upload = () => {
           contentType: selectedFile.type,
           filename: selectedFile.name,
         })
-        .then((data) => {
+        .then((data: React.SetStateAction<SanityAssetDocument | undefined>) => {
           setVideoAsset(data);
           setLoading(false);
         });
